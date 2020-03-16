@@ -10,3 +10,28 @@ sources:
 models:
     - name: stg_fema__disasters_1994_2020
       description: "FEMA declared disasters from 1994 to 2020"
+
+      columns:
+        - name: incident_id
+          description: "String: The unique id of the FEMA-declared disaster."
+          tests:
+            - unique
+            - not_null
+
+        - name: incident_state
+          description: "String: The two-letter abbreviation of the state in which the disasters occured."
+          tests:
+            - not_null
+
+        - name: incident_ym
+          description: "Date: The yyyy-mm-dd of the year and month in which the disasters occured."
+          tests:
+            - not_null
+
+        - name: incident_declaration
+          description: "String: The two-letter code assigned by fema for the disaster's assistance obligation."
+          tests:
+            - not_null
+
+        - name: incident_type
+          description: "String: The type of disaster that occured."
