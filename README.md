@@ -6,7 +6,8 @@
 
 ##### _Data based on_:
   - FEMA's data on declared disasters and the dates they occurred from 1994-2020
-  - CDC's Vital Statistics System datasets on total live births by state, year, and month
+  - CDC's Vital Statistics System datasets on total live births by state, year,
+    and month with datasets for 2003-2006 and 2007-2018. 
 
 ##### _Learning Objectives_:
   - Do some light data cleaning using python and pandas - this cleaning can all be done with SQL, but I
