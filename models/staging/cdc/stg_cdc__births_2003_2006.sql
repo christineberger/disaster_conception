@@ -8,9 +8,9 @@ birth_states_list as (
 
 transformed_births as (
   select
-    upper(state) as birth_state
-    date(year, month, 1) as birth_ym,
-    date_add(date(year, month, 1), interval -9 month) as birth_conception_ym
+    upper(state) as birth_state,
+    date(year, month_code, 1) as birth_ym,
+    date_add(date(year, month_code, 1), interval -9 month) as birth_conception_ym,
     coalesce(births, 0) as birth_total
   from source
   where notes is null
