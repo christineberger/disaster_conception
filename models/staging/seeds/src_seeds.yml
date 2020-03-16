@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: seeds
+    schema: disaster_conception_seed_data
+    tables:
+      - name: us_state_codes
+
+models:
+    - name: stg_seeds__birth_state_codes
+      description: "Contains a list of states and their associated abbreviations and codes."
+      columns:
+        - name: birth_state
+          description: 'String: The name of a U.S. state in all caps.'
+          tests:
+            - not_null
+            - unique
+        - name: birth_state_code
+          description: 'String: The two-letter abbreviation of a U.S. state in all caps.'
+          tests:
+            - not_null
+            - unique
