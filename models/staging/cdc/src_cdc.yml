@@ -27,13 +27,13 @@ models:
           tests:
             - not_null
 
-        - name: birth_year
-          description: "Int64: The 4 digit year in which the birth was registered."
+        - name: birth_ym
+          description: "Date: The yyyy-mm-dd format for the month and year the birth was registered."
           tests:
             - not_null
 
-        - name: birth_month
-          description: "Int64: The 1-2 digit month number in which the birth was registered."
+        - name: birth_conception_ym
+          description: "Date: The yyyy-mm-dd format for the month and year the birth was conceived."
           tests:
             - not_null
 
@@ -60,16 +60,16 @@ models:
           tests:
             - not_null
 
-        - name: birth_year
-          description: "Int64: The 4 digit year in which the birth was registered."
+        - name: birth_ym
+          description: "Date: The yyyy-mm-dd format for the month and year the birth was registered."
           tests:
             - not_null
 
-        - name: birth_month
-          description: "Int64: The 1-2 digit month number in which the birth was registered."
+        - name: birth_conception_ym
+          description: "Date: The yyyy-mm-dd format for the month and year the birth was conceived."
           tests:
             - not_null
-
+            
         - name: birth_total
           description: "Int64: The total number of births registered for the state, year, and month."
           tests:
