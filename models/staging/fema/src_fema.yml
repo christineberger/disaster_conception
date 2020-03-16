@@ -10,12 +10,15 @@ sources:
 models:
     - name: stg_fema__disasters_1994_2020
       description: "FEMA declared disasters from 1994 to 2020"
+      tests:
+        - unique:
+            column_name: "concat(incident_id, incident_ym, incident_type)"
+
 
       columns:
         - name: incident_id
           description: "String: The unique id of the FEMA-declared disaster."
           tests:
-            - unique
             - not_null
 
         - name: incident_state

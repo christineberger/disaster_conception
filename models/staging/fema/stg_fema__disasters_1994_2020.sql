@@ -3,13 +3,14 @@ with source as (
 ),
 
 transformed as (
-  select
+  select distinct
     incident_id,
     substr(incident_id, -2) as incident_state,
     date(extract(year from date), extract(month from date), 1) as incident_ym,
-    declaration_type as incident_declaration,
+    coalesce(declaration_type, 'NA') as incident_declaration,
     incident_type
   from source
+  where incident_id is not null
 )
 
 select * from transformed

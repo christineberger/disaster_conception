@@ -14,7 +14,7 @@ models:
 
       tests:
         - unique:
-            column_name: "concat(birth_state, birth_year, birth_month)"
+            column_name: "concat(birth_state, birth_ym)"
 
       columns:
         - name: birth_state
@@ -47,7 +47,7 @@ models:
 
       tests:
         - unique:
-            column_name: "concat(birth_state, birth_year, birth_month)"
+            column_name: "concat(birth_state, birth_ym)"
 
       columns:
         - name: birth_state
@@ -69,7 +69,7 @@ models:
           description: "Date: The yyyy-mm-dd format for the month and year the birth was conceived."
           tests:
             - not_null
-            
+
         - name: birth_total
           description: "Int64: The total number of births registered for the state, year, and month."
           tests:
