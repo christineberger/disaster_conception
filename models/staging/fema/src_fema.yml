@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: fema
+    database: cb-datasets
+    schema: fema
+    tables:
+      - name: disasters_1994_2020
+
+models:
+    - name: stg_fema__disasters_1994_2020
+      description: "FEMA declared disasters from 1994 to 2020"
