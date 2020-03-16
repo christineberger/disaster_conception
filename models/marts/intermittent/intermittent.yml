@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: births__union
+    description: "Joins the stg_cdc__births_2003_2006 and stg_cdc__births_2007_2018 models"
