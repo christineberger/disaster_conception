@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: cdc
+    database: cb-datasets
+    schema: cdc
+    tables:
+      - name: births_2003_2006
+      - name: births_2007_2018
+
+models:
+    - name: stg_cdc__births_2003_2006
+      description: "CDC recorded live births by state, year, and month for 2003-2006"
+
+    - name: stg_cdc__births_2007_2018
+      description: "CDC recorded live births by state, year, and month for 2007-2018"
