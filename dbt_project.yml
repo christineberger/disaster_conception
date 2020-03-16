@@ -21,9 +21,10 @@ clean-targets:
 # Seeds
 seeds:
   disaster_conception:
-    enabled: true
-    schema: seed_data
-      
+    us_state_codes:
+      enabled: true
+      schema: seed_data
+
 # Models
 models:
   disaster_conception:

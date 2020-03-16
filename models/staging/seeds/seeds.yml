@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: seeds
+    schema: disaster_conception_seed_data
+    tables:
+      - name: us_state_codes
+
+models:
+    - name: stg_seeds__us_state_codes
+      description: "Contains a list of states and their associated abbreviations and codes."
