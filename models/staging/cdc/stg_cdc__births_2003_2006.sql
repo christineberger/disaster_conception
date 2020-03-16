@@ -9,8 +9,8 @@ birth_states_list as (
 transformed_births as (
   select
     upper(state) as birth_state,
-    year as birth_year,
-    month_code as birth_month,
+    date(year, month_code, 1) as birth_ym,
+    date_add(date(year, month_code, 1), interval -9 month) as birth_conception_ym,
     coalesce(births, 0) as birth_total
   from source
   where notes is null
@@ -19,8 +19,8 @@ transformed_births as (
 select
   transformed_births.birth_state,
   birth_states_list.birth_state_code,
-  transformed_births.birth_year,
-  transformed_births.birth_month,
+  transformed_births.birth_ym,
+  transformed_births.birth_conception_ym,
   transformed_births.birth_total
 from transformed_births
 left join birth_states_list using (birth_state)
