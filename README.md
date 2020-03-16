@@ -1,8 +1,8 @@
 ### Disaster-induced Conceptions
 
 ##### _Hypothesis_:<br /><br />
-  There is an increase in conception due to the bonds circumstances of major disasters
-  (via bonding/co-habitation time increase).
+  There is an increase in conception due to the circumstances of major disasters
+  (via increase in time for bonding/co-habitation).
 
 ##### _Data based on_:
   - FEMA's data on declared disasters and the dates they occurred from 1994-2020
@@ -20,7 +20,7 @@
   - Reinforce my implementation of the basic dbt project structure and best practices:
     (structure: https://discourse.getdbt.com/t/how-we-structure-our-dbt-projects/355)
     (best practices: https://docs.getdbt.com/docs/best-practices)
-    
+
 ##### _Resources_:
 - FEMA.gov:
     - Declared Disasters data set:
