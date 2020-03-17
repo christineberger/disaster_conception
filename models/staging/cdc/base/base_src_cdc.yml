@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: cdc
+    database: cb-datasets
+    schema: cdc
+    tables:
+      - name: births_2003_2006
+      - name: births_2007_2018

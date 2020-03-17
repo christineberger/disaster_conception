@@ -3,7 +3,7 @@ with source as (
 ),
 
 birth_states_list as (
-  select * from {{ ref('stg_seeds__birth_state_codes') }}
+  select * from {{ ref('seeds__birth_state_codes') }}
 ),
 
 transformed_births as (
