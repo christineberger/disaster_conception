@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: births__unioned
+    description: "Contains all data from the CDC on births from 2003 to 2006 and births from 2007 to 2018."
+    tests:
+      - unique:
+          column_name: "concat(birth_state, birth_ym)"

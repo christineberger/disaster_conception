@@ -7,7 +7,7 @@ sources:
       - name: us_state_codes
 
 models:
-    - name: stg_seeds__birth_state_codes
+    - name: seeds__birth_state_codes
       description: "Contains a list of states and their associated abbreviations and codes."
       columns:
         - name: birth_state
