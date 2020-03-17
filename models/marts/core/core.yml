@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_disaster_conceptions
+    description: "The number of births by state, year, and month in comparison to recorded disasters for the state."
+
+    tests:
+      - unique:
+          column_name: "concat(state, year_month)"
+
+    columns:
+      - name: state
+        description: "String: The state name in which the birth registrations and disasters occured."
+        tests:
+          - not_null
+
+      - name: year_month
+        description: "Date: The year and month (in yyyy-mm-dd format) that the birth registrations and disasters occured."
+        tests:
+          - not_null
+
+      - name: babies_conceived
+        description: "Int64: The total number of babies conceived for the state, year, and month."
+        tests:
+          - not_null
+
+      - name: disasters_declared
+        description: "Int64: The total disasters that occured for the state, year, and month."
+        tests:
+          - not_null
