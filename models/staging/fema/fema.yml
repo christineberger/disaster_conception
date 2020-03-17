@@ -27,7 +27,7 @@ models:
             - not_null
 
         - name: incident_ym
-          description: "Date: The yyyy-mm-dd of the year and month in which the disasters occured."
+          description: "Date: The year and month (in yyyy-mm-dd format) in which the disasters occured."
           tests:
             - not_null
 
